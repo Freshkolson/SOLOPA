@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Оформить заказ{% endblock %}
+
+{% block content %}
+    <div class="order-form-container">
+        <h2>Оформите заказ</h2>
+        <form action="{{ url_for('main.submit_order') }}" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" name="name" required><br>
+
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" required><br>
+
+            <label for="city">Город:</label>
+            <input type="text" name="city" required><br>
+
+            <label for="post_office">Отделение почты:</label>
+            <input type="text" name="post_office" required><br>
+
+            <label for="phone">Номер телефона:</label>
+            <input type="text" name="phone" value="+380" required><br>
+
+            <p><strong>В ближайшее время вам позвонит оператор для подтверждения заказа.</strong></p>
+            <button type="submit" class="confirm-button">Подтвердить</button>
+        </form>
+    </div>
+{% endblock %}

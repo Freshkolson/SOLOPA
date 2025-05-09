@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="product-container">
+        <img src="{{ url_for('static', filename='images/product.jpg') }}" alt="Товар" class="product-image">
+        <h1 class="product-title">Чай для похудания</h1>
+        <p class="product-description">Этот чай самый популярный в Европе, он содержит витамины C, E, D</p>
+        <p class="product-description">Благодаря своему составу он дает организму возможность не застаивать лишний вес</p>
+        <a href="{{ url_for('main.order_form') }}" class="order-button">Сделать заказ</a>
+    </div>
+{% endblock %}

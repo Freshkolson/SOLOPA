@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Подтверждение заказа{% endblock %}
+
+{% block content %}
+    <div class="confirmation-container">
+        <h1>Ваш заказ отправлен оператору</h1>
+        <a href="{{ url_for('main.index') }}" class="order-button">На главную страницу</a>
+    </div>
+{% endblock %}
